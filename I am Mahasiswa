@@ -1,0 +1,29 @@
+import 'package:flutter/material.dart';
+
+// Fungsi utama yang akan dieksekusi saat aplikasi dijalankan
+void main() {
+  runApp(MyApp());
+}
+
+// Kelas utama aplikasi yang merupakan turunan dari StatelessWidget
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // MaterialApp adalah widget utama untuk aplikasi berbasis Material Design
+    return MaterialApp(
+      debugShowCheckedModeBanner: false, // Menyembunyikan label debug
+      home: IAmMahasiswa(), // Menetapkan tampilan utama aplikasi
+    );
+  }
+}
+
+// Kelas untuk halaman "I Am Mahasiswa"
+class IAmMahasiswa extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // Scaffold menyediakan struktur dasar visual untuk halaman
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("I Am Mahasiswa"), // Judul pada AppBar
+        backgroundColor: Colors.blueAccent, // Warna latar belakang AppBar
+        centerTitle: true, // Menengahkan judul
