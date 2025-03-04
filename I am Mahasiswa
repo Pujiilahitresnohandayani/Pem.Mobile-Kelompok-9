@@ -27,3 +27,33 @@ class IAmMahasiswa extends StatelessWidget {
         title: Text("I Am Mahasiswa"), // Judul pada AppBar
         backgroundColor: Colors.blueAccent, // Warna latar belakang AppBar
         centerTitle: true, // Menengahkan judul
+centerTitle: true, // Menengahkan judul
+        elevation: 9.0, // Menambahkan efek bayangan
+        shadowColor: Colors.grey, // Warna bayangan
+      ),
+      body: Container(
+        width: double.infinity, // Lebar penuh layar
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/bg.png"), // Gambar latar belakang
+            fit: BoxFit.cover, // Menyesuaikan gambar agar menutupi seluruh layar
+          ),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center, // Pusatkan anak-anak secara vertikal
+          children: [
+            Image.asset(
+              "assets/mhs.png", // Gambar mahasiswa
+              width: 200, // Lebar gambar
+              height: 200, // Tinggi gambar
+            ),
+            SizedBox(height: 20), // Spasi vertikal antara gambar dan teks
+            Text(
+              "I Am Mahasiswa", // Teks utama
+              style: TextStyle(
+                fontSize: 24, // Ukuran font
+                fontWeight: FontWeight.bold, // Ketebalan font
+                color: Colors.white, // Warna teks
+              ),
+            ),
+            SizedBox(height: 10), // Spasi vertikal antara teks dan kontainer
